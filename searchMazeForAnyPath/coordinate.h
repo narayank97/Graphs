@@ -2,9 +2,10 @@
 class coordinate{
    
     public:
-        int x;
-        int y;
+        int row;
+        int col;
         
+        coordinate();
         coordinate(int, int);
         void printCoord();
         bool isEqualTo(coordinate myPoint);

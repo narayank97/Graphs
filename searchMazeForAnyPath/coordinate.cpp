@@ -3,18 +3,23 @@
 
 using namespace std;
 
-coordinate::coordinate(int a, int b){
-    x = a;
-    y = b;
+coordinate::coordinate(){
+    row = 0;
+    col = 0;
 }
 
-bool coordinate::isEqualTo(coordinate myPoint){
-    if(myPoint.x == this->x && myPoint.y == this->y){
+coordinate::coordinate(int a, int b){
+    row = a;
+    col = b;
+}
+
+bool coordinate::isEqualTo(coordinate mcolPoint){
+    if(mcolPoint.row == this->row && mcolPoint.col == this->col){
         return true;
     }
     return false;
 }
 
 void coordinate::printCoord(){
-    cout << "("<<this->x <<" , "<<this->y << ")"<< endl;
+    cout << "("<<this->row <<" , "<<this->col << ")"<< endl;
 }
